@@ -1,0 +1,32 @@
+{
+  "name": "whatsapp-discord-link",
+  "version": "1.0.0",
+  "description": "Link WhatsApp to Discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-Blahaj/WhatsApp-Discord-Link.git"
+  },
+  "keywords": [
+    "WhatsApp",
+    "Discord",
+    "WhatsApp-Discord",
+    "Link",
+    "discord.js",
+    "whatsapp-web.js"
+  ],
+  "author": "MrBlahaj",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "fs": "^0.0.1-security",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.18.4"
+  },
+  "bugs": {
+    "url": "https://github.com/Mr-Blahaj/WhatsApp-Discord-Link/issues"
+  }
+}
