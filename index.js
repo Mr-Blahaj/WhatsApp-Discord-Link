@@ -27,7 +27,7 @@ DiscordClient.once('ready', async () => {
     config['DeletedMessagesChannel'] = (await DiscordClient.guilds.cache.get(guild_id).channels.create({name: '🗑-deleted-messages', type: 0})).id;
 
     // <------ Saving and creating webhook ------>
-    let webhook = await DiscordClient.channels.cache.get(config.ForumChannel).createWebhook({name: 'WhatsApp',avatar: `https://cdn-icons-png.flaticon.com/512/124/124034.png`});
+    const webhook = await DiscordClient.channels.cache.get(config.ForumChannel).createWebhook({name: 'WhatsApp',avatar: `https://cdn-icons-png.flaticon.com/512/124/124034.png`});
     config['WebhookID'] = webhook.id;
     config['WebhookToken'] = webhook.token;
 
@@ -41,7 +41,7 @@ DiscordClient.once('ready', async () => {
 });
 
 DiscordClient.on('messageCreate', async (message) => {
-  let info = DiscordClient.channels.cache.get(config.ForumChannel).threads.cache.get(message.channelId);
+  const info = DiscordClient.channels.cache.get(config.ForumChannel).threads.cache.get(message.channelId);
   if (!message.webhookId && info) { // if the message is not sent by webhook and is in thread
     let id = await DiscordClient.channels.cache.get(config.ForumChannel).threads.cache.get(message.channelId).fetchStarterMessage(); // getting the first message of the thread which contains the ID
     WhatsAppClient.sendMessage(id.content, message.content); // sending the whatsapp message
@@ -58,7 +58,7 @@ WhatsAppClient.on('qr', async (qr) => { // When not logged in
 
 WhatsAppClient.on('message_create', async (message) => {
   const contact = await message.getContact(); // getting contact info
-  let chat = await message.getChat(); // getting chat info
+  const chat = await message.getChat(); // getting chat info
   let thread = DiscordClient.channels.cache.get(config.ForumChannel).threads.cache.find((x) => x.name === `${chat.name}`);
   if (chat.id._serialized != 'status@broadcast') {
     if (!thread) { // if the thread is not already made
@@ -99,7 +99,7 @@ WhatsAppClient.on('message_revoke_everyone', async (message, revoked_msg) => {
 
 process.on('uncaughtException', async (e) => { // catch errors
   console.log(e);
-  log('```js' + `\n${e}` + '```');
+  log(`\`\`\`js\n${e}\`\`\``);
 });
 
 async function log(data) { // log function
