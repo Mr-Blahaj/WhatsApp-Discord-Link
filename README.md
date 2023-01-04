@@ -41,7 +41,7 @@
 **Step 7:** Paste your server ID on **line 3** of config.js
 
 
-**Step 8:** Execute index.js. After starting, the bot will automatically generate 3 channels which can later re-named
+**Step 8:** Execute index.js. After starting, the bot will automatically generate 3 channels which can later be re-named
 
 <img src="./assets/channels.png" style="max-width: 50%">
 <br></br>
