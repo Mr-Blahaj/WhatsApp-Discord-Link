@@ -1,5 +1,6 @@
 module.exports = {
     name: "qr",
+    type: "whatsapp",
     async execute(DiscordClient, qr) {
         const config = require('../config.json')
         require('qrcode-terminal').generate(qr, {

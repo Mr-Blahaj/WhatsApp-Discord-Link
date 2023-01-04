@@ -1,5 +1,6 @@
 module.exports = {
     name: "message_revoke_everyone",
+    type: "whatsapp",
     async execute(DiscordClient, message, revoked_msg) {
         const config = require('../config.json')
         const DefaultAvatar = 'https://i.ibb.co/KjssTPM/image-2023-01-02-211044093.png';

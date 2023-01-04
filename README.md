@@ -30,7 +30,7 @@
 
 **Step 5:** Paste your Bot Token on **Line 2** of config.json
 
-<img src="./assets/token.png" style="max-width: 50%">
+<img src="./assets/token_config.png" style="max-width: 50%">
 <br></br>
 
 **Step 6:** Copy your server ID, this can be done by right clicking the server icon and clicking "Copy ID" button
