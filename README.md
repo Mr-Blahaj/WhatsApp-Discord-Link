@@ -28,7 +28,7 @@
 <img src="./assets/dev-portal.png" style="max-width: 50%">
 <br></br>
 
-**Step 5:** Paste your Bot Token on **Line 9** of index.js
+**Step 5:** Paste your Bot Token on **Line 2** of config.json
 
 <img src="./assets/token.png" style="max-width: 50%">
 <br></br>
@@ -38,7 +38,7 @@
 <img src="./assets/server.png" style="max-width: 50%">
 <br></br>
 
-**Step 7:** Paste your server ID on **line 10** of index.js
+**Step 7:** Paste your server ID on **line 3** of config.js
 
 
 **Step 8:** Execute index.js. After starting, the bot will automatically generate 3 channels which can later re-named
