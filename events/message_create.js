@@ -19,7 +19,7 @@ module.exports = {
                 });
             }
             webhookClient.send({
-                content: message.body,
+                content: `${message.body || 'Cannot Send this message, it may be an image!'}`,
                 username: `${contact.name ?? contact.pushname}`,
                 avatarURL: `${(await contact.getProfilePicUrl()) ?? DefaultAvatar}`,
                 threadId: thread.id,
