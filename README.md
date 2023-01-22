@@ -67,3 +67,4 @@ To reply to message, just send a message in the thread where the chat is, the me
 <br></br>
 <img src="./assets/discord-whatsapp.png" style="max-width: 50%">
 <br></br>
+
